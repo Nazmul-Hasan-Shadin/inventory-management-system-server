@@ -8,6 +8,8 @@ const port= process.env.PORT ||5000;
 
 
  const userShopRoute=require('./router/userShop')
+ const usersRouter=require('./router/Users')
+const product= require('./router/products/products.js')
 
 
 
@@ -16,7 +18,18 @@ connectToDatabase()
  applyMiddleware(app)
 
  app.use(userShopRoute)
- 
+  app.use(usersRouter)
+  app.use(product)
+
+
+
+
+
+
+
+
+
+
 
 app.get('/health',(req,res)=>{
     res.send('server is running')

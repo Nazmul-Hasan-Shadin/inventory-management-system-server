@@ -2,6 +2,7 @@ const UsersShop = require("../../../model/usersShop")
 
 const userShop=async(req,res)=>{
     let shopInfo=req.body;
+    console.log(shopInfo);
     shopInfo.productLimit=3
     shopInfo.roll='manager'
      console.log(shopInfo);

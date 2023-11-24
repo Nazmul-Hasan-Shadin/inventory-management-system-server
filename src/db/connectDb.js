@@ -14,8 +14,10 @@ const getConnection=()=>{
 const connectToDatabase= async()=>{
     console.log('database connecting');
     const uri= getConnection()
-    console.log(uri);
-    await mongoose.connect(uri)
+
+    await mongoose.connect(uri,{
+        dbName:process.env.DB_NAME
+    })
     console.log('connected');
 }
 
