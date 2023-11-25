@@ -37,6 +37,13 @@ const ProductMod= new Schema({
     email:{
         type:String,
         required:true
+    },
+    sellingPrice: {
+        type:Number,
+
+    } ,
+    buyPrice:{
+        type:Number
     }
 })
 
