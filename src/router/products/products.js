@@ -5,6 +5,7 @@ const allproducts = require('../../api/products/allProducts')
 const productById = require('../../api/products/productById')
 const updateProduct = require('../../api/products/updateProduct')
 const deleteProduct = require('../../api/products/deleteProduct')
+const updateQuantity = require('../../api/products/updateQuantity')
 const router= express.Router()
 
 
@@ -18,5 +19,7 @@ router.get('/admin/products-id/:id', productById )
 router.put('/admin/product/update/:id',updateProduct)
 
 router.delete('/admin/product/:id',deleteProduct)
+
+router.patch('/updateQuantity/:cartId',updateQuantity)
 
 module.exports=router

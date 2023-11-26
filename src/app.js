@@ -11,6 +11,7 @@ const port= process.env.PORT ||5000;
  const usersRouter=require('./router/Users')
 const product= require('./router/products/products.js')
 const cart=require('./router/cart/cart.js')
+const payment= require('./router/payment/payment.js')
 
 
 
@@ -24,6 +25,7 @@ connectToDatabase()
   app.use(product)
 
   app.use(cart)
+  app.use(payment)
 
 
 

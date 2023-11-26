@@ -1,8 +1,9 @@
 const managerProducts = require("../../model/product")
 
 const products=async(req,res)=>{
-   const products=req.body
+   let products=req.body
  
+    
    
 
 

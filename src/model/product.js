@@ -44,6 +44,10 @@ const ProductMod= new Schema({
     } ,
     buyPrice:{
         type:Number
+    },
+    saleCount:{
+        type:Number,
+        
     }
 })
 

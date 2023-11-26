@@ -23,7 +23,10 @@ const cartSchema= new Schema({
     } ,
     cartId:{
        type:String
-    }
+    },
+    email:{
+        type:String
+     }
 })
 
 const cartModel= mongoose.model('carts',cartSchema)
