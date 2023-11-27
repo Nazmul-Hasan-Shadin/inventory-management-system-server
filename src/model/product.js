@@ -22,6 +22,7 @@ const ProductMod= new Schema({
         required:true
     },
     name:{
+        
         type:String,
         required:true
     },
