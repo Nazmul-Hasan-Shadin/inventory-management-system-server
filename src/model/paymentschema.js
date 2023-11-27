@@ -9,7 +9,7 @@ const ProductMod= new Schema({
     name:{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'products',
-        required: true
+ 
     },
     email:String,
     transictionId:String,

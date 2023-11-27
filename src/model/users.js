@@ -12,6 +12,14 @@ const usersModal= new Schema({
     photo:{
         type:String
        
+    },
+    roll:{
+        type:String
+       
+    },
+    income: {
+        type: Number,  
+
     }
 })
 
