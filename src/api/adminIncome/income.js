@@ -3,20 +3,40 @@ const UsersData = require("../../model/users");
 
 const income = async (req, res) => {
     const fixedEmail = "nazmulhasanshadin000@gmail.com";
-
+     const price=req.body.price
     try {
         const result = await UsersData.findOne({ email: fixedEmail });
 
         if (result) {
             console.log('User found:', result);
 
-            
-            result.income += 10;
+       if (price===10) {
+        result.income += 10;
 
        
-            await result.save();
+        await result.save();
 
-            console.log('Admin income updated:', result.income);
+        console.log('Admin income updated:', result.income);
+       }    
+       if (price===20) {
+        result.income += 20;
+
+       
+        await result.save();
+
+        console.log('Admin income updated:', result.income);
+       }  
+       
+       
+       if (price===50) {
+        result.income += 50;
+
+       
+        await result.save();
+
+        console.log('Admin income updated:', result.income);
+       }   
+ 
 
  
             res.json({ success: true, data: result });
