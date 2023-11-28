@@ -4,7 +4,7 @@ const applyMiddleware = require('./middleware/applyMiddleware');
 require('dotenv').config()
 
 const app=express()
-const port= process.env.PORT ||5000;
+const port= process.env.PORT || 5000;
 
 
  const userShopRoute=require('./router/userShop')
@@ -13,10 +13,10 @@ const product= require('./router/products/products.js')
 const cart=require('./router/cart/cart.js')
 const payment= require('./router/payment/payment.js')
 const adminIncome= require('./router/adminIncome/adminIncome.js')
+const authentication= require('./router/authentication/index.js')
 
 
 
-connectToDatabase()
  
  applyMiddleware(app)
 
@@ -27,6 +27,7 @@ connectToDatabase()
   app.use(cart)
   app.use(payment)
   app.use(adminIncome)
+  app.use(authentication)
 
 
 
@@ -57,4 +58,8 @@ app.all('*',(req,res,next)=>{
  })
 
 
-app.listen(port)
+
+
+
+
+module.exports=app
