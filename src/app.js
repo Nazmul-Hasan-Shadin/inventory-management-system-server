@@ -40,16 +40,18 @@ const authentication= require('./router/authentication/index.js')
 
 app.get('/health',(req,res)=>{
     res.send('server is running')
+
 })
 
 
 
 
-app.all('*',(req,res,next)=>{
- console.log(req.url);
- const error = new Error(`the requested url is invaild [ ${req.url}]`)
- next(error)
-})
+app.all('*', (req, res, next) => {
+  console.log(req.url);
+  const error = new Error(`The requested URL is invalid [${req.url}]`);
+  next(error);
+});
+
 
  app.use((err,req,res,next)=>{
     res.status(err.status || 500).json({
