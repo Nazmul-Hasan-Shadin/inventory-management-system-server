@@ -5,7 +5,7 @@ const findProductByEmail=async(req,res)=>{
     console.log(query);
       try {
         if (query) {
-            const result=await managerProducts.estimatedDocumentCount(query)
+            const result=await managerProducts.countDocuments(query)
             res.json({count:result,success:true})
         }
       } catch (error) {
