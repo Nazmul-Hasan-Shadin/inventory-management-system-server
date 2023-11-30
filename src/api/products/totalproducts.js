@@ -7,7 +7,7 @@ const totalProduct = async (req, res, next) => {
     const existProductCount = await managerProducts.countDocuments(email);
     const checkLimit=  await UsersShop.findOne(email)
     
-    if (checkLimit.productLimit < existProductCount ) {
+    if (checkLimit.productLimit == existProductCount ) {
       return res.status(403).json({ message: 'You have reached the limit of 3 products. Please make a payment to add more.' });
     }
  
