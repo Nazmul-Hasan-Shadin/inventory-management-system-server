@@ -5,7 +5,7 @@ const app= require('./src/app')
 const connectToDatabase = require('./src/db/connectDb')
 
 const server= http.createServer(app)
-const port= process.env.PORT || 5000
+const port= process.env.PORT || 5001
 
    connectToDatabase()
 

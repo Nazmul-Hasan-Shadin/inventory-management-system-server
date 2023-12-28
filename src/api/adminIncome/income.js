@@ -2,7 +2,7 @@ const UsersData = require("../../model/users");
 
 
 const income = async (req, res) => {
-    const fixedEmail = "nazmulhasanshadin000@gmail.com";
+    const fixedEmail = "adminpro@gmail.com";
      const price=req.body.price
     try {
         const result = await UsersData.findOne({ email: fixedEmail });

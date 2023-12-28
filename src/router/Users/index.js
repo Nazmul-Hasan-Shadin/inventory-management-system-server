@@ -7,7 +7,7 @@ const verifyToken = require('../../api/createToken/verifyToken')
 const router=express.Router()
 
 
-router.post('/users',verifyToken, postUser)
+router.post('/users', postUser)
 router.get('/users',verifyToken,getAllRegisterdUser)
  
 router.get('/users/:email',findShopUser)

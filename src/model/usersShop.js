@@ -35,7 +35,13 @@ const usersSchema= new Schema({
         type:String,
         required:true
        
-    }
+    },
+    
+        createdAt:{
+            type: Date,
+            default: Date.now
+        }
+    
 })
 
 const UsersShop= mongoose.model('userShop',usersSchema)

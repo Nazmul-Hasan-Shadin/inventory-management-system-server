@@ -18,7 +18,7 @@ const findShopUser=async(req,res)=>{
     }
     if (userInfo) {
      sysadmin = userInfo.roll === 'sysadmin';
-      console.log(userInfo,'admind');
+      
       console.log(sysadmin);
     }
 
