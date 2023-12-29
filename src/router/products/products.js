@@ -11,6 +11,7 @@ const sysallproducts = require('../../api/products/sysallProduct')
 const productCount = require('../../api/products/productsCount')
 const verifyToken = require('../../api/createToken/verifyToken')
 const findProductByEmail = require('../../api/products/findProductByEmail')
+const searchProduct = require('../../api/products/searchProduct')
 const router= express.Router()
 
 
@@ -31,5 +32,5 @@ router.get('/sales-collection/:email',verifyToken ,salesCollection)
 
 router.get('/productCount',productCount)
 router.get('/productCountByEmail/:email',findProductByEmail)
-
+router.get('/productSearch',searchProduct)
 module.exports=router

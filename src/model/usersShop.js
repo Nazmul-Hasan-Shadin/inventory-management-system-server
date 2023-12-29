@@ -40,6 +40,12 @@ const usersSchema= new Schema({
         createdAt:{
             type: Date,
             default: Date.now
+        },
+        photo:{
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'usersdatas'
+
+
         }
     
 })

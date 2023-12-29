@@ -7,7 +7,7 @@ const salesCollection = async (req, res) => {
         const result = await SaleCollection.find({ email: query }).populate({
             path: 'cartId',
             model: 'products', 
-            select: 'name sellingPrice buyPrice', 
+            // select: 'name sellingPrice buyPrice',  select specific field otherwise it select all field
             
         });
 

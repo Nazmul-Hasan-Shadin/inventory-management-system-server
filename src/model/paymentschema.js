@@ -13,7 +13,7 @@ const ProductMod = new Schema({
     date: String,
     cartId: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'products', // Replace with your actual model name
+        ref: 'products', 
     }]
 });
 
